@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Bài 1
+        let arr1 = ['Đỏ','cam','vàng'];
+        let out = arr1.join(', ');
+        document.write(out);
+
+        
+        document.write('<br>');
+        // //Bài 2:
+        let string = (prompt('Nhập vào một chuỗi: ')).toString();
+        let result_ = [string[0]];
+        for (let i = 1; i < string.length; i++ ) {
+            if ((string [i-1] % 2 ===0) && (string[i] % 2 ===0)) {
+                result_.push('-',string[i]);
+            } else {
+                result_.push(string[i]);
+            }
+        }
+        document.write(result_.join(' '));
+
+
+        document.write('<br>');
+        //Bài 3:
+        let str = prompt('Nhập vào một chuỗi:');
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+  
+        for(let x=0; x<str.length; x++){
+            if(UPPER.indexOf(str[x]) !== -1){
+                result.push(str[x].toLowerCase());
+            } else if(LOWER.indexOf(str[x]) !== -1){
+                result.push(str[x].toUpperCase());
+            } else {
+                result.push(str[x]);
+            }
+        };
+        document.write(result.toString());
+    </script>
+</body>
+</html>

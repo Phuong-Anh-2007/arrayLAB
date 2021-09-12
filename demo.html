@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total = 0, max =0, index;
+        let x = 0
+        let arr = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        //In ra mảng 2 chiều và tổng từng dòng
+        for (let x = 0; x < arr.length; x++) {
+            for (let y = 0; y < arr[x].length; y++) {
+                document.write(arr[x][y]+', ');
+            }
+            document.write('<br>');
+        }
+        document.write('<br>');
+        for (x; x < arr.length; x++) {
+            for (let y = 0; y < arr[x].length; y++) {
+                total += arr[x][y];
+            }
+            document.write('Tổng của dòng '+x+' là: '+total+'<br>');
+            if (total > max) {
+                max = total;
+                index = x;
+            }
+            total = 0;
+        }
+        document.write('Dòng '+(x-1)+' có tổng lớn nhất là '+max);
+        document.write('<hr>');
+
+        //Tổng của mảng hai chiều
+        total  = 0;
+        for (let x = 0; x < arr.length; x++) {
+            for (let y = 0; y < arr[x].length; y++) {
+                total += arr[x][y];
+            }
+        }
+        document.write('Tổng của mảng này là: '+total);
+    </script>
+</body>
+</html>
